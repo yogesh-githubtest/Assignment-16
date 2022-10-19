@@ -1,18 +1,18 @@
 package com.exception;
 
-public class Product implements Runnable {
+import com.exception1.ProductException;
+
+public class Product {
 
 	
 	public void productCheck(int wt){
 		
 		if(wt<100) {
-			throw new Product("Invalid Weight, weight mut be above 100");
+			throw new ProductException("Invalid Weight, weight mut be above 100");
+		}
+		else {
+			System.out.println("Product is ready for dispatch");
 		}
 	}
 
-	@Override
-	public void run() {
-		// TODO Auto-generated method stub
-		
-	}
 }
